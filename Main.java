@@ -15,7 +15,8 @@ public class Main{
             System.out.println("4. Consultar Velocidad de  licuado");
             System.out.println("5. Consultar Llenado");
             System.out.println("6. Vaciar");
-            System.out.println("7. Salir");
+            System.out.println("7. Apagar");
+            System.out.println("8. Salir");
             System.out.println("Ingrese una opcion: ");
             int opcion = scanner.nextInt();
             switch(opcion){
@@ -38,6 +39,9 @@ public class Main{
                     licuadora.vaciar();
                     break;
                 case 7:
+                    licuadora.apagar();
+                    break;
+                case 8:
                     a=false;
                     break;
                 default:

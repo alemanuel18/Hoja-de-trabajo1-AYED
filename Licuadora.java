@@ -61,6 +61,12 @@ public class Licuadora implements Interfaz{
             capacidadLicuadora=false;
         }
     }
+
+    public void apagar(){
+        if (estadoLicuadora==true) {
+            estadoLicuadora=false;
+        }
+    }
     /**
      * 
      * @return
