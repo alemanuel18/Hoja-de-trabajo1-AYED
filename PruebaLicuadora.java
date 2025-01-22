@@ -1,3 +1,9 @@
+/**
+ * Universidad del Valle de Guatemala
+ * Autor: Norman Aguirre Lepe
+ * Fecha: 20 de enero de 2025
+ */
+
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
