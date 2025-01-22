@@ -2,7 +2,7 @@
  * Universidad del Valle de Guatemala
  * Autores: Alejandro Manuel Jerez Melgar
  * Joel Josue Nerio Alonzo #24253
- * Norman Lepe
+ * Norman Aguirre Lepe
  * Fecha: 17 de enero de 2025
  */
 
