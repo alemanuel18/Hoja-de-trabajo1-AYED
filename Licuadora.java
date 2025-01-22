@@ -75,6 +75,14 @@ public class Licuadora implements Interfaz{
         return velocidad;
     }
 
+    public boolean getLleno(){
+        return lleno;
+    }
+
+    public boolean getEncendido(){
+        return encendido;
+    }
+
     public void setEncendido(boolean encendido) {
         this.encendido = encendido;
     }
@@ -84,6 +92,6 @@ public class Licuadora implements Interfaz{
     public void setVelocidad(int velocidad) {
         this.velocidad = velocidad;
     }
-    
+
     
 }
