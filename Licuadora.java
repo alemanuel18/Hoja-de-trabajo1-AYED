@@ -5,74 +5,85 @@
  */
 public class Licuadora implements Interfaz{
 
-    private boolean estadoLicuadora; /*true=On, false=Off */
-    private boolean capacidadLicuadora; /*true=llena, fasle==vacio */
-    private int velocidadLicuadora; /*empieza en cero */
+    private boolean encendido; /*true=On, false=Off */
+    private boolean lleno; /*true=llena, fasle==vacio */
+    private int velocidad; /*empieza en cero */
 
     /**
      * 
-     * @param estadoLicuadora
-     * @param capacidadLicuadora
-     * @param velocidadLicuadora
+     * @param encendido
+     * @param lleno
+     * @param velocidad
      */
-    public Licuadora(boolean estadoLicuadora, boolean capacidadLicuadora, int velocidadLicuadora){
-        this.estadoLicuadora=estadoLicuadora;
-        this.capacidadLicuadora=capacidadLicuadora;
-        this.velocidadLicuadora=velocidadLicuadora;
+    public Licuadora(boolean encendido, boolean lleno, int velocidad){
+        this.encendido=encendido;
+        this.lleno=lleno;
+        this.velocidad=velocidad;
     }
 
     @Override
     public void encender(){
-        if (capacidadLicuadora==true && estadoLicuadora==false) {
-            estadoLicuadora=true;
-            velocidadLicuadora=1;
+        if (lleno==true && encendido==false) {
+            encendido=true;
+            velocidad=1;
         }
     }
 
     @Override
     public void llenar(){
-        if (capacidadLicuadora==false) {
-            capacidadLicuadora=true;
+        if (lleno==false) {
+            lleno=true;
         }
     }
 
     @Override
     public void aumentarVelocidad(){
-        if (velocidadLicuadora<=10) {
-            velocidadLicuadora =+1;
+        if (velocidad<=10) {
+            velocidad =+1;
         }else{
-            velocidadLicuadora=0;
+            velocidad=0;
         }
     }
 
     @Override
     public int consultarVelocidad(){
-        return velocidadLicuadora;
+        return velocidad;
     }
 
     @Override
     public boolean consultarLlenado(){
-        return capacidadLicuadora;
+        return lleno;
     }
 
     @Override
     public void vaciar(){
-        if (capacidadLicuadora==true) {
-            capacidadLicuadora=false;
+        if (lleno==true) {
+            lleno=false;
         }
     }
 
     public void apagar(){
-        if (estadoLicuadora==true) {
-            estadoLicuadora=false;
+        if (encendido==true) {
+            encendido=false;
         }
     }
     /**
      * 
      * @return
      */
-    public int getVelocidadLicuadora() {
-        return velocidadLicuadora;
+    public int getVelocidad() {
+        return velocidad;
     }
+
+    public void setEncendido(boolean encendido) {
+        this.encendido = encendido;
+    }
+    public void setLleno(boolean lleno) {
+        this.lleno = lleno;
+    }
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
+    
     
 }

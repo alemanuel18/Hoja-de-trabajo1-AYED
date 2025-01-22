@@ -18,7 +18,7 @@ class LicuadoraTest {
         licuadora.encender();
 
         // Verificar que está encendida y la velocidad se ha inicializado
-        assertEquals(1, licuadora.getVelocidadLicuadora(), "La licuadora debería encenderse con velocidad 1.");
+        assertEquals(1, licuadora.getVelocidad(), "La licuadora debería encenderse con velocidad 1.");
     }
 
     @Test
@@ -30,7 +30,7 @@ class LicuadoraTest {
         licuadora.aumentarVelocidad();
 
         // Verificar que la velocidad es 1
-        assertEquals(1, licuadora.getVelocidadLicuadora(), "La velocidad debería ser 1 después de aumentar.");
+        assertEquals(1, licuadora.getVelocidad(), "La velocidad debería ser 1 después de aumentar.");
 
         // Aumentar velocidad varias veces hasta llegar al límite
         for (int i = 0; i < 10; i++) {
@@ -38,7 +38,7 @@ class LicuadoraTest {
         }
 
         // Verificar que la velocidad vuelve a 0 al pasarse del límite
-        assertEquals(0, licuadora.getVelocidadLicuadora(), "La velocidad debería reiniciarse a 0 al sobrepasar el límite.");
+        assertEquals(0, licuadora.getVelocidad(), "La velocidad debería reiniciarse a 0 al sobrepasar el límite.");
     }
 
     @Test
