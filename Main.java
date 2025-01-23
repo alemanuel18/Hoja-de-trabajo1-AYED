@@ -26,25 +26,57 @@ public class Main{
             int opcion = scanner.nextInt();
             switch(opcion){
                 case 1:
-                    licuadora.encender();
+                    if (licuadora.consultarLlenado()==true && licuadora.getEncendido()==false) {
+                        licuadora.encender();
+                        System.out.println("se ha encendido la licuadora");
+                    }else{
+                        System.out.println("La licuadora ya esta encendida o no esta llena");
+                    }
                     break;
                 case 2:
-                    licuadora.llenar();
+                    System.out.println("por favor ingrese de que quiere que se llena la licuadora");
+                    String llenado = scanner.next();
+                    if (licuadora.consultarLlenado()==false) {
+                        licuadora.llenar();
+                        System.out.println("se ha llenado la licuadora con "+llenado);
+                    }else{
+                        System.out.println("La licuadora ya esta llena");
+                    }
                     break;
                 case 3:
-                    licuadora.aumentarVelocidad();
+                    if(licuadora.getEncendido() == true && licuadora.consultarLlenado()==true){
+                        licuadora.aumentarVelocidad();
+                        System.out.println("Se ha aumentado la velocidad");
+                    } else {
+                        System.out.println("La licuadora no esta encendida o no esta llena");
+                    }
+                    System.out.println("Se ha aumentado la velocidad");
                     break;
                 case 4:
-                    licuadora.consultarVelocidad();
+                    System.out.println("La velocidad actual es: "+licuadora.consultarVelocidad());
                     break;
                 case 5:
-                    licuadora.consultarLlenado();
+                    if (licuadora.consultarLlenado()==true) {
+                        System.out.println("La licuadora esta llena");
+                    }else{
+                        System.out.println("La licuadora esta vacia");
+                    }
                     break;
                 case 6:
-                    licuadora.vaciar();
+                    if (licuadora.consultarLlenado()==true) {
+                        licuadora.vaciar();
+                        System.out.println("Se ha vaciado la licuadora");
+                    }else{
+                        System.out.println("La licuadora ya esta vacia");
+                    }
                     break;
                 case 7:
-                    licuadora.apagar();
+                    if(licuadora.getEncendido()==true && licuadora.consultarLlenado()==false){
+                        licuadora.apagar();
+                        System.out.println("Se ha apagado la licuadora");
+                    }else{
+                        System.out.println("La licuadora ya esta apagada o tienes algo aun adentor de la licuadora");
+                    }
                     break;
                 case 8:
                     a=false;
