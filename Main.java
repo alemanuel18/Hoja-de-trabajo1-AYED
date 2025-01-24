@@ -4,7 +4,6 @@
  * Fecha: 20 de enero de 2025
  */
 import java.util.Scanner; //importar la clase Scanner para recibir datos del usuario
-
 public class Main{
     public   static void main(String []args){   /*se  declara como tal el main */
 
